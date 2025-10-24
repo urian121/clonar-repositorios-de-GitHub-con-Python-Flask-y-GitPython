@@ -1,0 +1,300 @@
+/* GitHub Repository Cloner - Estilos inspirados en Shadcn */
+
+/* Variables CSS para colores suaves estilo Shadcn */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+/* Tipografía Inter (similar a Shadcn) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fondo suave con gradiente sutil */
+.gradient-bg {
+  background: linear-gradient(135deg, 
+    hsl(210 40% 98%) 0%, 
+    hsl(214.3 31.8% 95%) 50%, 
+    hsl(210 40% 98%) 100%);
+  min-height: 100vh;
+}
+
+/* Card principal con estilo Shadcn */
+.card-modern {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: 
+    0 1px 3px 0 rgb(0 0 0 / 0.1), 
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.card-modern:hover {
+  box-shadow: 
+    0 4px 6px -1px rgb(0 0 0 / 0.1), 
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Botón principal estilo Shadcn */
+.btn-modern {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-modern:hover {
+  background: hsl(221.2 83.2% 45%);
+  transform: translateY(-1px);
+}
+
+.btn-modern:active {
+  transform: translateY(0);
+}
+
+.btn-modern:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Inputs estilo Shadcn */
+.form-control-modern {
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.form-control-modern:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+.form-control-modern::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Select estilo Shadcn */
+.select-modern {
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  cursor: pointer;
+}
+
+.select-modern:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+/* Labels estilo Shadcn */
+.form-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Texto de ayuda */
+.form-text {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0.25rem;
+}
+
+/* Iconos */
+.icon-github {
+  color: hsl(var(--foreground));
+  font-size: 2rem;
+}
+
+/* Título con gradiente sutil */
+.text-gradient {
+  background: linear-gradient(135deg, 
+    hsl(var(--primary)) 0%, 
+    hsl(221.2 83.2% 45%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Animaciones suaves */
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Efecto glass sutil */
+.glass-effect {
+  background: hsl(var(--card) / 0.8);
+  border: 1px solid hsl(var(--border));
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius);
+}
+
+/* Alertas estilo Shadcn */
+.alert {
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alert-success {
+  background: hsl(142.1 76.2% 36.3% / 0.1);
+  border-color: hsl(142.1 76.2% 36.3% / 0.2);
+  color: hsl(142.1 76.2% 36.3%);
+}
+
+.alert-danger {
+  background: hsl(var(--destructive) / 0.1);
+  border-color: hsl(var(--destructive) / 0.2);
+  color: hsl(var(--destructive));
+}
+
+.alert-warning {
+  background: hsl(38 92% 50% / 0.1);
+  border-color: hsl(38 92% 50% / 0.2);
+  color: hsl(38 92% 50%);
+}
+
+.alert-info {
+  background: hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary));
+}
+
+/* Estados de validación */
+.is-invalid {
+  border-color: hsl(var(--destructive));
+}
+
+.is-invalid:focus {
+  box-shadow: 0 0 0 2px hsl(var(--destructive) / 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-modern {
+    margin: 1rem;
+    border-radius: var(--radius);
+  }
+  
+  .btn-modern {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .form-control-modern,
+  .select-modern {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Utilidades */
+.text-muted {
+  color: hsl(var(--muted-foreground));
+}
+
+.text-white-50 {
+  color: hsl(var(--muted-foreground) / 0.7);
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.small {
+  font-size: 0.75rem;
+}
+
+/* Transiciones suaves para todos los elementos interactivos */
+button, input, select, a {
+  transition: all 0.2s ease;
+}
+
+/* Focus visible para accesibilidad */
+.btn-modern:focus-visible,
+.form-control-modern:focus-visible,
+.select-modern:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
