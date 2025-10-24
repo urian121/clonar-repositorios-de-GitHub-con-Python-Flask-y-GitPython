@@ -9,8 +9,8 @@ Aplicación web para clonar repositorios de GitHub usando Python y GitPython. In
 
 ```bash
 # Clonar repositorio
-git clone <url-del-repositorio>
-cd como-clonar-un-repositorio-de-GitHub-con-Python
+git clone https://github.com/urian121/clonar-repositorios-de-GitHub-con-Python-Flask-y-GitPython
+cd clonar-repositorios-de-GitHub-con-Python-Flask-y-GitPython
 
 # Instalar dependencias
 pip install -r requirements.txt
@@ -55,3 +55,12 @@ Abre `http://localhost:5000` en tu navegador.
 3. Haz clic en "Clonar Repositorio"
 
 La aplicación clonará el repositorio en la ubicación seleccionada y mostrará el resultado.
+
+### Expresiones de Gratitud 🎁
+
+    Comenta a otros sobre este proyecto 📢
+    Invita una cerveza 🍺 o un café ☕
+    Paypal iamdeveloper86@gmail.com
+    Da las gracias públicamente 🤓.
+
+## No olvides SUSCRIBIRTE 👍
