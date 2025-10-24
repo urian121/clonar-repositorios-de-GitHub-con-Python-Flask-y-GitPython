@@ -1,162 +1,57 @@
-# Clonar un Repositorio de GitHub con Python
+# GitHub Repository Cloner
 
-Una aplicación web moderna desarrollada con Python y Flask que permite clonar repositorios de GitHub usando GitPython.
+Aplicación web para clonar repositorios de GitHub usando Python y GitPython. Interfaz moderna que detecta automáticamente las carpetas del sistema operativo.
 
-## Características
+![Demo](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/refs/heads/master/clonar-repositorios-de-GitHub-con-Python-Flask-y-GitPython.png)
 
-- 🎨 **Interfaz moderna**: Diseño inspirado en Tailwind CSS con Bootstrap 5
-- 🚀 **Clonación rápida**: Usa GitPython para clonar repositorios de GitHub
-- 📁 **Múltiples directorios**: Selecciona dónde guardar tus repositorios
-- ✅ **Validación**: Validación en tiempo real de URLs de GitHub
-- 📱 **Responsive**: Funciona perfectamente en dispositivos móviles
-- 🔒 **Seguro**: Manejo de errores y validaciones de seguridad
 
-## Instalación
+## 🚀 Instalación Rápida
 
-1. **Clona este repositorio**:
 ```bash
+# Clonar repositorio
 git clone <url-del-repositorio>
 cd como-clonar-un-repositorio-de-GitHub-con-Python
-```
 
-2. **Crea un entorno virtual**:
-```bash
-python -m venv env
-```
-
-3. **Activa el entorno virtual**:
-```bash
-# En Windows
-env\Scripts\activate
-
-# En macOS/Linux
-source env/bin/activate
-```
-
-4. **Instala las dependencias**:
-```bash
+# Instalar dependencias
 pip install -r requirements.txt
-```
 
-## Uso
-
-1. **Ejecuta la aplicación**:
-```bash
+# Ejecutar aplicación
 python app.py
 ```
 
-2. **Abre tu navegador** y ve a `http://localhost:5000`
+Abre `http://localhost:5000` en tu navegador.
 
-3. **Ingresa la URL del repositorio** que deseas clonar
+## ✨ Características
 
-4. **Selecciona el directorio de destino** donde quieres guardar el repositorio
+- **Detección automática del OS**: Windows, macOS, Linux
+- **Carpetas del sistema**: Desktop, Downloads, Documents, Pictures, Music, Videos
+- **Interfaz moderna**: Bootstrap 5 con estilo Shadcn
+- **Validación en tiempo real**: URLs de GitHub
+- **Manejo de errores**: Repositorios privados, permisos, etc.
 
-5. **Haz clic en "Clonar Repositorio"**
+## 📁 Estructura
 
-### 1. Instalar GitPython
-```bash
-pip install GitPython
+```
+├── app.py                 # Aplicación Flask principal
+├── utils/
+│   └── system_directories.py  # Detección de carpetas del OS
+├── templates/index.html   # Interfaz web
+├── static/
+│   ├── css/styles.css     # Estilos Shadcn
+│   └── js/script.js       # JavaScript simplificado
+└── requirements.txt       # Dependencias
 ```
 
-### 2. Instalar Flask (si no está instalado)
-```bash
-pip install Flask
-```
+## 🛠️ Tecnologías
 
-## Directorios Disponibles
-
-La aplicación detecta automáticamente las carpetas del sistema operativo:
-
-### Windows:
-- **Desktop** - Escritorio
-- **Downloads** - Descargas  
-- **Documents** - Documentos
-- **Pictures** - Imágenes
-- **Music** - Música
-- **Videos** - Videos
-
-### macOS:
-- **Desktop** - Escritorio
-- **Downloads** - Descargas
-- **Documents** - Documentos  
-- **Pictures** - Imágenes
-- **Music** - Música
-- **Movies** - Películas
-
-### Linux:
-- **Desktop** - Escritorio
-- **Downloads** - Descargas
-- **Documents** - Documentos
-- **Pictures** - Imágenes
-- **Music** - Música
-- **Videos** - Videos
-
-También disponible:
-- **Directorio Actual** - Donde está la aplicación
-
-## API Endpoints
-
-### GET /api/repos
-Lista todos los repositorios clonados en el sistema.
-
-### DELETE /api/delete/<path:repo_path>
-Elimina un repositorio específico.
-
-## Tecnologías Utilizadas
-
-- **Backend**: Python, Flask
+- **Backend**: Python, Flask, GitPython
 - **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
-- **Git**: GitPython
-- **Iconos**: Bootstrap Icons
+- **Compatibilidad**: Windows, macOS, Linux
 
-## Estructura del Proyecto
+## 📝 Uso
 
-```
-como-clonar-un-repositorio-de-GitHub-con-Python/
-├── app.py                 # Aplicación principal Flask
-├── requirements.txt       # Dependencias de Python
-├── templates/
-│   └── index.html        # Plantilla HTML principal
-├── static/               # Archivos estáticos
-│   ├── css/
-│   │   └── styles.css    # Estilos estilo Shadcn
-│   └── js/
-│       └── script.js     # JavaScript simplificado
-└── README.md             # Documentación
-```
+1. Ingresa la URL del repositorio de GitHub
+2. Selecciona la carpeta de destino (se detecta automáticamente)
+3. Haz clic en "Clonar Repositorio"
 
-## Características de la Interfaz
-
-- **Detección automática del OS**: Detecta Windows, macOS y Linux
-- **Carpetas del sistema**: Acceso directo a carpetas del usuario
-- **Diseño estilo Shadcn**: Interfaz moderna y limpia
-- **Validación en tiempo real**: Feedback inmediato al usuario
-- **Mensajes flash**: Notificaciones de éxito, error y advertencia
-- **Iconos intuitivos**: Bootstrap Icons para mejor UX
-- **Responsive**: Funciona en todos los dispositivos
-
-## Manejo de Errores
-
-La aplicación maneja varios tipos de errores:
-
-- **URLs inválidas**: Validación de URLs de GitHub
-- **Repositorios no encontrados**: Manejo de repositorios inexistentes
-- **Errores de autenticación**: Para repositorios privados
-- **Directorios existentes**: Advertencia si el directorio ya existe
-- **Errores de red**: Manejo de problemas de conectividad
-
-## Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## Autor
-
-Desarrollado con ❤️ usando Python, Flask y GitPython.
+La aplicación clonará el repositorio en la ubicación seleccionada y mostrará el resultado.

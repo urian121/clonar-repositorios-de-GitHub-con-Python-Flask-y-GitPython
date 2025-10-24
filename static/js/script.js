@@ -1,5 +1,3 @@
-// GitHub Repository Cloner - JavaScript Simplificado
-
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('cloneForm');
     const repoUrl = document.getElementById('repoUrl');
